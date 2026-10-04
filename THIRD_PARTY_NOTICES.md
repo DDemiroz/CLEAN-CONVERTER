@@ -10,9 +10,13 @@ The original application's license does not apply to dependencies.
 | CustomTkinter / tkinterdnd2 | 6.0.0 / 0.6.3 | Preserve Python-package and bundled Tcl/Tk/TkDnD license files. |
 | Python / Tcl/Tk / other packaged libraries | Determined by build environment | Inventory the actual bundle, not only direct requirements. |
 
-**Release gate:** this document is an inventory, not a replacement for license texts
-or corresponding source. Do not publish the bundled installer until the exact
-binary inventory, license texts and required source materials have been verified.
+The installer includes the collected license texts and generated binary inventory.
+The bundled FFmpeg 9.0.2 build identifies the exact FFmpeg revision and build
+configuration in its included `BUILD.txt`. The corresponding FFmpeg revision is
+available at <https://github.com/FFmpeg/FFmpeg/tree/946fcce07b>; the distributor's
+build page records the variant, linked libraries and source reference at
+<https://www.gyan.dev/ffmpeg/builds/>. Clean Converter's complete source and build
+recipe are published with the matching GitHub tag.
 
 Upstream references: [FFmpeg legal](https://ffmpeg.org/legal.html),
 [FFmpeg builds](https://www.gyan.dev/ffmpeg/builds/),

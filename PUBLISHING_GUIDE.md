@@ -1,6 +1,6 @@
 # Publishing Clean Converter 1.0.0
 
-The current source is a local pre-release. No public download has been uploaded.
+Version 1.0.0 is distributed through this repository's GitHub Releases page.
 
 ## Build from source
 
@@ -12,8 +12,8 @@ The current candidate uses FFmpeg/ffprobe 9.0.2 essentials and Deno 2.9.7.
 Keep the verified FFmpeg distribution LICENSE and README as
 release-metadata/licenses/FFmpeg/LICENSE.txt and BUILD.txt, and the exact Deno
 release's LICENSE.md under release-metadata/licenses/Deno/. These generated/local
-materials are not committed. Complete corresponding-source and dependency-notice
-review is still required; copying top-level licenses alone does not clear release.
+materials are embedded in the packaged application. The public notice identifies
+the exact FFmpeg revision, build configuration and upstream build/source locations.
 
 ```powershell
 py -3.14 -m venv .venv
@@ -50,8 +50,7 @@ test media, private development notes, settings and backups remain excluded.
 No certificate purchase is included. The existing build is unsigned; do not claim
 code signing or ask users to disable security protections.
 
-## When the Release is actually public
+## Release maintenance
 
-Replace the pre-release notice in README.md and README_TR.md with the verified
-download link and checksum. Keep the language switcher, screenshots, known limits
-and third-party attribution consistent in both languages.
+Keep the verified download link, checksum, language switcher, screenshots, known
+limits and third-party attribution consistent in both languages for every release.

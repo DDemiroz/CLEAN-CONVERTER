@@ -6,9 +6,9 @@
 
 > ## 📦 Uygulamayı kullanmak mı istiyorsunuz?
 >
-> İlk paket yayımlandığında [GitHub Releases](https://github.com/DDemiroz/CLEAN-CONVERTER/releases) bölümündeki **`CleanConverterSetup.exe`** dosyasını indirip kurun. Python, FFmpeg ve gerekli diğer araçlar pakete dahildir. **Code → Download ZIP kaynak kodu içerir; kurulum dosyası değildir.**
+> **[`CleanConverterSetup.exe`](https://github.com/DDemiroz/CLEAN-CONVERTER/releases/download/v1.0.0/CleanConverterSetup.exe)** dosyasını indirip çalıştırın. Python, FFmpeg ve gerekli diğer araçlar pakete dahildir. **Code → Download ZIP kaynak kodu içerir; kurulum dosyası değildir.**
 
-**1.0.0 — yayın öncesi.** Kaynak kod bu depoda bulunuyor; kurulum paketi henüz yayımlanmadı.
+**1.0.0 — güncel sürüm.** Windows x64 · imzasız kurulum paketi · GPL-3.0-only.
 
 ![Clean Converter](docs/screenshots/home.png)
 
@@ -26,16 +26,16 @@
 
 ## 📦 Kurulum: kullanıcı için tek paket
 
-Yayımlandığında GitHub **Releases** bölümündeki **CleanConverterSetup.exe** dosyasını indirin ve çalıştırın. **Code → Download ZIP**, kurulum paketi değil kaynak koddur.
+GitHub **Releases** bölümündeki **CleanConverterSetup.exe** dosyasını indirin ve çalıştırın. **Code → Download ZIP**, kurulum paketi değil kaynak koddur.
 
-Kurulum paketi Python çalışma ortamını, **FFmpeg, ffprobe, Deno ve yt-dlp** bileşenlerini birlikte içerir. Kullanıcının bunları ayrı indirmesi, komut çalıştırması veya PATH ayarlaması gerekmez. Kaynak deposunda büyük araç dosyalarının bulunmaması kurulumdan çıkarıldıkları anlamına gelmez. Yeni sürümün paket içeriği yayın öncesi ayrıca doğrulanacaktır.
+Kurulum paketi Python çalışma ortamını, **FFmpeg, ffprobe, Deno ve yt-dlp** bileşenlerini birlikte içerir. Kullanıcının bunları ayrı indirmesi, komut çalıştırması veya PATH ayarlaması gerekmez. Kaynak deposunda büyük araç dosyalarının bulunmaması kurulumdan çıkarıldıkları anlamına gelmez.
 
 1. Kurulum sihirbazını tamamlayın; isterseniz masaüstü kısayolunu seçin.
 2. Uygulamayı açın ve ilk açılışta çıktı klasörünü seçin.
 3. Dosyanızı seçip formatı belirleyin, **Convert** ile başlayın.
 4. **Done** mesajını gördüğünüzde dosyanız hazırdır.
 
-Mevcut eski paket imzasızdır. Yayımlanacak dosyanın kaynağını ve SHA-256 özetini kontrol edin.
+Paket dijital olarak imzalanmamıştır. Dosyanın bu deponun Releases bölümünden geldiğini ve yayımlanan SHA-256 dosyasını kontrol edin.
 
 Mevcut geliştirme/derleme hedefi **Windows x64**; desteklenen en eski Windows sürümü doğrulanmadı. macOS/Linux kurulum paketi sunulmuyor. İnternet indirme için gerekir, yerel dönüşüm için gerekmez. Kaynak indirme, geçici işlemler ve son çıktı için boş disk alanı bırakın; gereken alan medyaya göre değişir.
 
@@ -335,7 +335,7 @@ Site yalnızca düğmeye tıklayınca açılır; hata tarayıcıyı otomatik aç
 
 ## Doğrulama ve yayın hazırlığı
 
-**Kayıtlı kaynak kontrolü — 2026-10-03: 68 test geçti.** 740×540 ve 1080×860 pencerede gerçek alt satır hizalama kontrolleri dahildir. Tarihli bir test sonucudur; hiç hata olmadığı anlamına gelmez.
+**Kayıtlı kaynak kontrolü — 2026-10-04: 68 test geçti.** 740×540 ve 1080×860 pencerede gerçek alt satır hizalama kontrolleri dahildir. Tarihli bir test sonucudur; hiç hata olmadığı anlamına gelmez.
 
 | Alan | Kanıt / kalan iş |
 |---|---|
@@ -344,7 +344,7 @@ Site yalnızca düğmeye tıklayınca açılır; hata tarayıcıyı otomatik aç
 | Canlı indirme kontrolleri | Daha önce hata veren iki örnek tam indirilmiş ve MP4 çıktıları 1920×1080 H.264/AAC doğrulanmıştı. Bu belge değişikliği için tekrarlanmadı; servis davranışı değişebilir. Özel/test URL'leri burada paylaşılmaz. |
 | Bekleyenler | Temiz Windows kurulum/ilk açılış/kaldırma, %150 dahil tam ekran/DPI matrisi, tam kurulu-paket kontrolleri ve eksiksiz gizlilik/lisans doğrulaması. Yeni EXE açılıyor ve son alt satır görsel olarak kontrol edildi; paketlenen araç özetleri ile yerel kullanıcı-yolu taraması geçti. |
 
-EXE ve kurulum paketi 2026-10-03 tarihinde güncel kaynakla yerelde yeniden derlendi. Bunlar yayımlanmamış test adaylarıdır; genel dağıtım için henüz onaylanmadı. Üçüncü taraf materyalleri ve son onay dahil yayın koşulları [yayın rehberinde](PUBLISHING_GUIDE.md) duruyor.
+EXE ve kurulum paketi, güncel kaynaklardan 1.0.0 sürümü için yeniden derlendi. Bilinen doğrulama sınırları yukarıda ve [yayın rehberinde](PUBLISHING_GUIDE.md) açıklanmaktadır.
 
 <a id="developers"></a>
 

@@ -6,9 +6,9 @@
 
 > ## 📦 Want to use the app?
 >
-> Install **`CleanConverterSetup.exe` from [GitHub Releases](https://github.com/DDemiroz/CLEAN-CONVERTER/releases)** when the first package is published. Python, FFmpeg and the other required tools are included. **Code → Download ZIP contains source code; it is not the installer.**
+> Download and run **[`CleanConverterSetup.exe`](https://github.com/DDemiroz/CLEAN-CONVERTER/releases/download/v1.0.0/CleanConverterSetup.exe)**. Python, FFmpeg and the other required tools are included. **Code → Download ZIP contains source code; it is not the installer.**
 
-**1.0.0 — pre-release.** Source code is available in this repository; the installer has not been published yet.
+**1.0.0 — current release.** Windows x64 · unsigned installer · GPL-3.0-only.
 
 ![Clean Converter](docs/screenshots/home.png)
 
@@ -26,16 +26,16 @@ For a first local conversion: **Choose File → Format → Output folder → Con
 
 ## 📦 Installation: one package for users
 
-When published, download **CleanConverterSetup.exe** from GitHub **Releases** and run it. **Code → Download ZIP** contains source code, not the installer.
+Download **CleanConverterSetup.exe** from GitHub **Releases** and run it. **Code → Download ZIP** contains source code, not the installer.
 
-The installer bundles the Python runtime, **FFmpeg, ffprobe, Deno and yt-dlp**. Users do not need separate downloads, terminal commands or PATH configuration. Excluding large tool binaries from source history does not exclude them from the installer. The new release's actual package contents will be verified before publication.
+The installer bundles the Python runtime, **FFmpeg, ffprobe, Deno and yt-dlp**. Users do not need separate downloads, terminal commands or PATH configuration. Excluding large tool binaries from source history does not exclude them from the installer.
 
 1. Complete setup; optionally create a desktop shortcut.
 2. Open the app and choose an output folder on first launch.
 3. Select a file and output format, then click **Convert**.
 4. Wait for **Done** before using the output.
 
-The existing older package is unsigned. Check the source and SHA-256 checksum of the published download.
+The package is unsigned. Verify that it comes from this repository's Releases page and check the published SHA-256 file.
 
 The current development/build target is **Windows x64**; a minimum supported Windows version has not been verified. macOS/Linux installers are not provided. Internet is needed for downloads, not local conversion. Keep free space for the source download, temporary work and final output; required space varies by media.
 
@@ -335,7 +335,7 @@ The website opens only when you click the button; an error does not automaticall
 
 ## Verification and release readiness
 
-**Recorded source check — 2026-10-03: 68 tests passed.** Includes real footer alignment checks at 740×540 and 1080×860. This is a dated test result, not a promise of zero defects.
+**Recorded source check — 2026-10-04: 68 tests passed.** Includes real footer alignment checks at 740×540 and 1080×860. This is a dated test result, not a promise of zero defects.
 
 | Area | Evidence / remaining work |
 |---|---|
@@ -344,7 +344,7 @@ The website opens only when you click the button; an error does not automaticall
 | Live download checks | Two previously failing examples were previously downloaded end to end and their MP4 outputs checked as 1920×1080 H.264/AAC. Not rerun for this documentation change; service behavior can change. Private/test URLs are not published here. |
 | Still pending | Clean-Windows installation/first run/removal, full display/DPI matrix including 150%, full installed-package checks and complete privacy/licensing verification. The rebuilt EXE starts and its final footer was visually checked; bundled tool hashes and a local-home-path scan passed. |
 
-The EXE and installer were rebuilt locally on 2026-10-03 with the current source. They are unpublished test candidates, not cleared public releases. Release gates, including third-party materials and final approval, remain in the [publishing guide](PUBLISHING_GUIDE.md).
+The EXE and installer were rebuilt from the current source for the 1.0.0 release. Known verification limits remain documented above and in the [publishing guide](PUBLISHING_GUIDE.md).
 
 <a id="developers"></a>
 
