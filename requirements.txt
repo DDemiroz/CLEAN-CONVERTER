@@ -1,0 +1,4 @@
+customtkinter==6.0.0
+tkinterdnd2==0.6.3
+yt-dlp[default]==2026.8.19
+yt-dlp-ejs==0.8.0
