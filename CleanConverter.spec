@@ -10,11 +10,13 @@ if not Path('release-metadata/BUILD-INVENTORY.json').is_file():
 datas += [('release-metadata', 'release-metadata')]
 for package in ['tkinterdnd2', 'customtkinter']:
     package_datas, package_binaries, package_imports = collect_all(package)
-    datas += package_datas
+    datas += [entry for entry in package_datas if Path(entry[0]).name != '.DS_Store']
     binaries += package_binaries
     hiddenimports += package_imports
 tmp_ret = collect_all('yt_dlp_ejs')
-datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]
+datas += [entry for entry in tmp_ret[0] if Path(entry[0]).name != '.DS_Store']
+binaries += tmp_ret[1]
+hiddenimports += tmp_ret[2]
 
 
 a = Analysis(
@@ -30,6 +32,7 @@ a = Analysis(
     noarchive=False,
     optimize=0,
 )
+a.datas = [entry for entry in a.datas if Path(entry[0]).name != '.DS_Store']
 pyz = PYZ(a.pure)
 
 exe = EXE(

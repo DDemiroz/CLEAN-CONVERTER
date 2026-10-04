@@ -2,6 +2,8 @@ import json
 import tempfile
 from pathlib import Path
 
+import pytest
+
 import app
 from app import (
     DEFAULT_FORMAT_LABEL,
@@ -33,12 +35,12 @@ def test_load_config_starts_at_1080p_even_if_best_was_saved(tmp_path, monkeypatc
 
 
 def test_normalize_media_link_adds_https_for_common_media_domains():
-    assert normalize_media_link("youtu.be/dQw4w9WgXcQ") == "https://youtu.be/dQw4w9WgXcQ"
+    assert normalize_media_link("youtu.be/abcdefghijk") == "https://youtu.be/abcdefghijk"
     assert normalize_media_link("www.instagram.com/reels/example/") == "https://www.instagram.com/reels/example/"
 
 
 def test_is_media_link_requires_http_or_https():
-    assert is_media_link("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+    assert is_media_link("https://www.youtube.com/watch?v=abcdefghijk")
     assert is_media_link("http://example.com/file.mp4")
     assert not is_media_link("not_a_link")
     assert not is_media_link("")
@@ -114,14 +116,33 @@ def test_human_bytes_and_eta_are_readable():
 
 def test_explain_yt_error_requested_format_is_user_friendly():
     text = explain_yt_error("ERROR: Requested format is not available", "https://example.com/video")
-    assert "uygun format" in text.lower()
-    assert "teknik detay" in text.lower()
+    assert "no format compatible" in text.lower()
+    assert "technical detail" in text.lower()
 
 
 def test_explain_yt_error_403_mentions_server_access():
     text = explain_yt_error("ERROR: HTTP Error 403: Forbidden", "https://example.com/video")
     assert "403" in text
-    assert "sunucu erisimi reddetti" in text.lower()
+    assert "server denied access" in text.lower()
+
+
+@pytest.mark.parametrize(
+    ("error", "expected"),
+    [
+        ("Sign in to confirm you're not a bot", "additional bot verification"),
+        ("Private video", "video is private"),
+        ("Login required", "requires sign-in"),
+        ("Video unavailable", "video is unavailable"),
+        ("Unsupported URL", "does not appear to be supported"),
+        ("Requested format is not available", "no format compatible"),
+        ("HTTP Error 429: Too Many Requests", "too many requests were detected"),
+        ("Unexpected extractor failure", "video could not be downloaded"),
+    ],
+)
+def test_explain_yt_error_messages_are_english(error, expected):
+    text = explain_yt_error(error, "https://example.com/video")
+    assert expected in text.lower()
+    assert "technical detail" in text.lower()
 
 
 def test_quiet_ytdlp_logger_methods_are_noops():

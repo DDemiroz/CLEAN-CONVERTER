@@ -3,11 +3,11 @@ VSVersionInfo(
                    mask=0x3f, flags=0x0, OS=0x40004, fileType=0x1,
                    subtype=0x0, date=(0, 0)),
   kids=[StringFileInfo([StringTable('040904B0', [
-    StringStruct('CompanyName', 'Demir Demiröz'),
+    StringStruct('CompanyName', 'DD'),
     StringStruct('FileDescription', 'Clean Converter'),
     StringStruct('FileVersion', '1.0.0'),
     StringStruct('InternalName', 'CleanConverter'),
-    StringStruct('LegalCopyright', 'Copyright © 2026 Demir Demiröz'),
+    StringStruct('LegalCopyright', 'Copyright © 2026 DD'),
     StringStruct('OriginalFilename', 'CleanConverter.exe'),
     StringStruct('ProductName', 'Clean Converter'),
     StringStruct('ProductVersion', '1.0.0')

@@ -229,7 +229,7 @@ Settings are stored at the generic Windows location `%APPDATA%\Clean Converter\c
 
 ## Error and warning guide
 
-Use the message text, not just the window title. The interface currently mixes English messages with Turkish download explanations; the recognizable originals below remain searchable in both READMEs. Paths, URLs and technical details vary and are intentionally omitted from examples.
+Use the message text, not just the window title. The application interface and error messages are in English; this guide explains the recognizable originals below. Paths, URLs and technical details vary and are intentionally omitted from examples.
 
 ### Startup, files and conversion
 
@@ -254,15 +254,15 @@ Use the message text, not just the window title. The interface currently mixes E
 
 | Message or identifying text | Short meaning | Possible cause | What to try |
 |---|---|---|---|
-| YouTube bu istegi bot kontrolune takti / confirm you're not a bot | Extra verification required. | Service anti-automation check. | Wait and retry later; check normal browser availability. The app has no verification/login workflow. |
-| Bu video private durumda / private video | Private content cannot be fetched. | Access is restricted. | Use content you are authorized to save through a supported access route. |
-| Bu video giris gerektiriyor / login required / sign in | Login or another access condition is required. | Account, age or regional condition; wording alone is not proof of the cause. | Check source availability; no in-app account or cookie import is provided. |
-| Video kullanilamiyor / video unavailable | Source is not available. | Removed, hidden, region-limited or temporarily unavailable media. | Verify the original URL in a browser; use another accessible authorized source if needed. |
-| Bu link desteklenmiyor / Unsupported URL | Downloader cannot handle this URL. | Unsupported site or page type. | Use a supported direct media-page URL; not every website is supported. |
-| uygun format bulunamadi / Requested format is not available / No video formats found | No usable stream matched. | Available streams, selected height or extraction problem. | Try another quality, including Best if a larger file is acceptable; report if a normally available format fails. |
-| Sunucu erisimi reddetti (403) / HTTP Error 403 / Forbidden | Server refused the media request. | Service restrictions, expired stream URL, client/extractor issue or other access problem. | Retry later and check for a verified updated app release. This does not prove the app is fault-free. |
-| Cok fazla istek algilandi (429) / Too Many Requests | Request rate was limited. | Too many requests from the connection. | Stop repeated attempts and wait before retrying. |
-| Video indirilemedi / Unknown yt-dlp error | Download failed without a more specific mapped explanation. | Network, extraction or service error. | Read technical details; check source access and network, then report a repeatable failure. |
+| YouTube requested additional bot verification / confirm you're not a bot | Extra verification required. | Service anti-automation check. | Wait and retry later; check normal browser availability. The app has no verification/login workflow. |
+| This video is private / private video | Private content cannot be fetched. | Access is restricted. | Use content you are authorized to save through a supported access route. |
+| This video requires sign-in / login required / sign in | Login or another access condition is required. | Account, age or regional condition; wording alone is not proof of the cause. | Check source availability; no in-app account or cookie import is provided. |
+| The video is unavailable / video unavailable | Source is not available. | Removed, hidden, region-limited or temporarily unavailable media. | Verify the original URL in a browser; use another accessible authorized source if needed. |
+| This link does not appear to be supported / Unsupported URL | Downloader cannot handle this URL. | Unsupported site or page type. | Use a supported direct media-page URL; not every website is supported. |
+| No format compatible with the selected quality was found / Requested format is not available / No video formats found | No usable stream matched. | Available streams, selected height or extraction problem. | Try another quality, including Best if a larger file is acceptable; report if a normally available format fails. |
+| The server denied access (403) / HTTP Error 403 / Forbidden | Server refused the media request. | Service restrictions, expired stream URL, client/extractor issue or other access problem. | Retry later and check for a verified updated app release. This does not prove the app is fault-free. |
+| Too many requests were detected (429) / Too Many Requests | Request rate was limited. | Too many requests from the connection. | Stop repeated attempts and wait before retrying. |
+| The video could not be downloaded / Unknown yt-dlp error | Download failed without a more specific mapped explanation. | Network, extraction or service error. | Read technical details; check source access and network, then report a repeatable failure. |
 
 ### Covers and thumbnails
 
@@ -335,7 +335,7 @@ The website opens only when you click the button; an error does not automaticall
 
 ## Verification and release readiness
 
-**Recorded source check — 2026-10-04: 68 tests passed.** Includes real footer alignment checks at 740×540 and 1080×860. This is a dated test result, not a promise of zero defects.
+**Recorded source check — 2026-10-04: 76 tests passed.** Includes real footer alignment checks at 740×540 and 1080×860. This is a dated test result, not a promise of zero defects.
 
 | Area | Evidence / remaining work |
 |---|---|

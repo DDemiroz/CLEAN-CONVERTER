@@ -1,4 +1,5 @@
 """Collect available notices and path-free inventory, not legal clearance."""
+import argparse
 import hashlib
 import importlib.metadata as metadata
 import json
@@ -13,6 +14,13 @@ OUT = ROOT / "release-metadata"
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--publication-ready",
+        action="store_true",
+        help="Mark the generated inventory ready only after the release checklist has been completed.",
+    )
+    args = parser.parse_args()
     licenses = OUT / "licenses"
     licenses.mkdir(parents=True, exist_ok=True)
     distributions = []
@@ -47,8 +55,12 @@ def main():
                       "version": result.stdout.splitlines()[0]})
     manifest = {"app_version": "1.0.0", "python": sys.version.split()[0],
                 "platform": "Windows x64", "packages": distributions, "tools": tools,
-                "publication_ready": False,
-                "gate": "Verify corresponding sources and all third-party notices before publishing."}
+                "publication_ready": args.publication_ready,
+                "gate": (
+                    "Release checklist completed; preserve this inventory with the matching package."
+                    if args.publication_ready
+                    else "Verify corresponding sources and all third-party notices before publishing."
+                )}
     (OUT / "BUILD-INVENTORY.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"Collected inventory: {len(distributions)} distributions, {len(tools)} tools.")
 

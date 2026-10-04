@@ -4,7 +4,7 @@
 #define MyAppName "Clean Converter"
 #define MyAppExeName "CleanConverter.exe"
 #define MyAppVersion "1.0.0"
-#define MyAppPublisher "Demir Demiröz"
+#define MyAppPublisher "DD"
 #define MyAppURL "https://demirdemiroz.com"
 
 [Setup]
@@ -16,6 +16,11 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL=https://demirdemiroz.com/iletisim/
 AppUpdatesURL={#MyAppURL}
+VersionInfoVersion=1.0.0.0
+VersionInfoCompany={#MyAppPublisher}
+VersionInfoDescription={#MyAppName} installer
+VersionInfoProductName={#MyAppName}
+VersionInfoCopyright=Copyright © 2026 {#MyAppPublisher}
 DefaultDirName={autopf}\{#MyAppName}
 DisableProgramGroupPage=yes
 OutputBaseFilename=CleanConverterSetup

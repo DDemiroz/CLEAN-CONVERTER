@@ -558,51 +558,51 @@ def explain_yt_error(message: str, url: str) -> str:
 
     if "sign in to confirm you're not a bot" in lower or "confirm you're not a bot" in lower:
         return (
-            "YouTube bu istegi bot kontrolune takti.\n\n"
-            "Neden: YouTube bu videoda ek dogrulama istiyor.\n"
-            "Ne yapabilirsin: Daha sonra tekrar dene veya farkli bir ag/VPN kapali sekilde dene.\n\n"
-            f"Teknik detay:\n{msg}"
+            "YouTube requested additional bot verification.\n\n"
+            "Why: YouTube requires an extra verification step for this video.\n"
+            "What to try: Wait and retry later, or try another network with any VPN disabled.\n\n"
+            f"Technical detail:\n{msg}"
         )
 
     if "private video" in lower:
-        return f"Bu video private durumda, bu yuzden indirilemiyor.\n\nTeknik detay:\n{msg}"
+        return f"This video is private and cannot be downloaded.\n\nTechnical detail:\n{msg}"
 
     if "login required" in lower or "sign in" in lower:
         return (
-            "Bu video giris gerektiriyor veya yas/surum bolgesi kisiti olabilir.\n\n"
-            f"Teknik detay:\n{msg}"
+            "This video requires sign-in or may have an age, account, or regional restriction.\n\n"
+            f"Technical detail:\n{msg}"
         )
 
     if "video unavailable" in lower or "this video is unavailable" in lower:
         return (
-            "Video kullanilamiyor. Link kaldirilmis, gizlenmis veya bolge kisitli olabilir.\n\n"
-            f"Link:\n{url}\n\nTeknik detay:\n{msg}"
+            "The video is unavailable. It may have been removed, hidden, or region-restricted.\n\n"
+            f"Link:\n{url}\n\nTechnical detail:\n{msg}"
         )
 
     if "unsupported url" in lower:
-        return f"Bu link desteklenmiyor gibi gorunuyor.\n\nLink:\n{url}\n\nTeknik detay:\n{msg}"
+        return f"This link does not appear to be supported.\n\nLink:\n{url}\n\nTechnical detail:\n{msg}"
 
     if "requested format is not available" in lower or "no video formats found" in lower:
         return (
-            "Bu videoda secilen kaliteyle uyumlu uygun format bulunamadi. Video icin sunulan akislarda "
-            "ayri ses/video, kalite siniri veya site tarafli kisit olabilir.\n\n"
-            f"Teknik detay:\n{msg}"
+            "No format compatible with the selected quality was found. The available streams may use "
+            "separate audio/video, a quality limit, or a service-side restriction.\n\n"
+            f"Technical detail:\n{msg}"
         )
 
     if "http error 403" in lower or "403 forbidden" in lower:
         return (
-            "Sunucu erisimi reddetti (403). Bu genelde gecici YouTube korumasi, bolge kisiti veya istemci "
-            "engeli yuzunden olur.\n\n"
-            f"Teknik detay:\n{msg}"
+            "The server denied access (403). This may be caused by temporary service protection, a regional "
+            "restriction, an expired stream URL, or a client/extractor issue.\n\n"
+            f"Technical detail:\n{msg}"
         )
 
     if "http error 429" in lower or "too many requests" in lower:
         return (
-            "Cok fazla istek algilandi (429). Bir sure bekleyip tekrar denemek gerekebilir.\n\n"
-            f"Teknik detay:\n{msg}"
+            "Too many requests were detected (429). Stop repeated attempts, wait, and try again later.\n\n"
+            f"Technical detail:\n{msg}"
         )
 
-    return f"Video indirilemedi.\n\nLink:\n{url}\n\nTeknik detay:\n{msg or 'Unknown yt-dlp error'}"
+    return f"The video could not be downloaded.\n\nLink:\n{url}\n\nTechnical detail:\n{msg or 'Unknown yt-dlp error'}"
 
 
 # ---------------- FFmpeg commands ----------------

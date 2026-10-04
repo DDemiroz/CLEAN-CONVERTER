@@ -229,7 +229,7 @@ Ayarlar genel Windows konumu `%APPDATA%\Clean Converter\config.json` içinde tut
 
 ## Hata ve uyarı rehberi
 
-Yalnızca pencere başlığına değil mesajın kendisine bakın. Arayüzde İngilizce mesajlarla Türkçe indirme açıklamaları birlikte bulunur; aşağıdaki ayırt edici özgün ifadeler iki README'de de aranabilir. Değişken yollar, URL'ler ve teknik ayrıntılar örneklerde özellikle yer almıyor.
+Yalnızca pencere başlığına değil mesajın kendisine bakın. Uygulama arayüzü ve hata mesajları İngilizcedir; bu rehber aşağıdaki ayırt edici özgün ifadeleri Türkçe olarak açıklar. Değişken yollar, URL'ler ve teknik ayrıntılar örneklerde özellikle yer almıyor.
 
 ### Başlangıç, dosyalar ve dönüştürme
 
@@ -254,15 +254,15 @@ Yalnızca pencere başlığına değil mesajın kendisine bakın. Arayüzde İng
 
 | Mesaj veya ayırt edici parça | Kısa anlamı | Olası neden | Ne deneyebilirsiniz? |
 |---|---|---|---|
-| YouTube bu istegi bot kontrolune takti / confirm you're not a bot | Ek doğrulama isteniyor. | Servisin otomasyon kontrolü. | Bekleyip sonra deneyin; normal tarayıcı erişimini kontrol edin. Uygulamada doğrulama/oturum açma akışı yoktur. |
-| Bu video private durumda / private video | Özel içerik alınamıyor. | Erişim sınırlı. | Kaydetme yetkiniz olan içeriği desteklenen erişim yoluyla kullanın. |
-| Bu video giris gerektiriyor / login required / sign in | Oturum veya başka erişim koşulu gerekiyor. | Hesap, yaş veya bölge koşulu; ifade tek başına nedeni kanıtlamaz. | Kaynağın erişilebilirliğini kontrol edin; uygulamada hesap/çerez içe aktarma yoktur. |
-| Video kullanilamiyor / video unavailable | Kaynak erişilebilir değil. | Kaldırılmış, gizli, bölge kısıtlı veya geçici olarak kullanılamayan medya. | Özgün URL'yi tarayıcıda kontrol edin; gerekirse erişilebilir, yetkili başka kaynak kullanın. |
-| Bu link desteklenmiyor / Unsupported URL | İndirici bu URL'yi işleyemiyor. | Desteklenmeyen site veya sayfa türü. | Desteklenen doğrudan medya sayfası URL'sini kullanın; her site desteklenmez. |
-| uygun format bulunamadi / Requested format is not available / No video formats found | Uygun akış bulunamadı. | Sunulan akışlar, seçilen yükseklik veya çıkarma sorunu. | Daha büyük dosya uygunsa Best dahil başka kalite deneyin; normalde var olan format alınamıyorsa bildirin. |
-| Sunucu erisimi reddetti (403) / HTTP Error 403 / Forbidden | Sunucu medya isteğini reddetti. | Servis kısıtı, süresi dolan akış URL'si, istemci/çıkarıcı veya başka erişim sorunu. | Sonra tekrar deneyin, doğrulanmış güncel uygulama yayını olup olmadığına bakın. Bu mesaj uygulamanın hatasız olduğunu kanıtlamaz. |
-| Cok fazla istek algilandi (429) / Too Many Requests | İstek sıklığı sınırlandı. | Bağlantıdan çok fazla istek gönderilmiş olabilir. | Tekrarlı denemeleri durdurup bekleyin. |
-| Video indirilemedi / Unknown yt-dlp error | Daha özel açıklamayla eşleştirilemeyen indirme hatası. | Ağ, çıkarma veya servis hatası. | Teknik ayrıntıyı okuyun; kaynak erişimi ve ağı kontrol edin, tekrarlanıyorsa bildirin. |
+| YouTube requested additional bot verification / confirm you're not a bot | Ek doğrulama isteniyor. | Servisin otomasyon kontrolü. | Bekleyip sonra deneyin; normal tarayıcı erişimini kontrol edin. Uygulamada doğrulama/oturum açma akışı yoktur. |
+| This video is private / private video | Özel içerik alınamıyor. | Erişim sınırlı. | Kaydetme yetkiniz olan içeriği desteklenen erişim yoluyla kullanın. |
+| This video requires sign-in / login required / sign in | Oturum veya başka erişim koşulu gerekiyor. | Hesap, yaş veya bölge koşulu; ifade tek başına nedeni kanıtlamaz. | Kaynağın erişilebilirliğini kontrol edin; uygulamada hesap/çerez içe aktarma yoktur. |
+| The video is unavailable / video unavailable | Kaynak erişilebilir değil. | Kaldırılmış, gizli, bölge kısıtlı veya geçici olarak kullanılamayan medya. | Özgün URL'yi tarayıcıda kontrol edin; gerekirse erişilebilir, yetkili başka kaynak kullanın. |
+| This link does not appear to be supported / Unsupported URL | İndirici bu URL'yi işleyemiyor. | Desteklenmeyen site veya sayfa türü. | Desteklenen doğrudan medya sayfası URL'sini kullanın; her site desteklenmez. |
+| No format compatible with the selected quality was found / Requested format is not available / No video formats found | Uygun akış bulunamadı. | Sunulan akışlar, seçilen yükseklik veya çıkarma sorunu. | Daha büyük dosya uygunsa Best dahil başka kalite deneyin; normalde var olan format alınamıyorsa bildirin. |
+| The server denied access (403) / HTTP Error 403 / Forbidden | Sunucu medya isteğini reddetti. | Servis kısıtı, süresi dolan akış URL'si, istemci/çıkarıcı veya başka erişim sorunu. | Sonra tekrar deneyin, doğrulanmış güncel uygulama yayını olup olmadığına bakın. Bu mesaj uygulamanın hatasız olduğunu kanıtlamaz. |
+| Too many requests were detected (429) / Too Many Requests | İstek sıklığı sınırlandı. | Bağlantıdan çok fazla istek gönderilmiş olabilir. | Tekrarlı denemeleri durdurup bekleyin. |
+| The video could not be downloaded / Unknown yt-dlp error | Daha özel açıklamayla eşleştirilemeyen indirme hatası. | Ağ, çıkarma veya servis hatası. | Teknik ayrıntıyı okuyun; kaynak erişimi ve ağı kontrol edin, tekrarlanıyorsa bildirin. |
 
 ### Kapak ve küçük resimler
 
@@ -335,7 +335,7 @@ Site yalnızca düğmeye tıklayınca açılır; hata tarayıcıyı otomatik aç
 
 ## Doğrulama ve yayın hazırlığı
 
-**Kayıtlı kaynak kontrolü — 2026-10-04: 68 test geçti.** 740×540 ve 1080×860 pencerede gerçek alt satır hizalama kontrolleri dahildir. Tarihli bir test sonucudur; hiç hata olmadığı anlamına gelmez.
+**Kayıtlı kaynak kontrolü — 2026-10-04: 76 test geçti.** 740×540 ve 1080×860 pencerede gerçek alt satır hizalama kontrolleri dahildir. Tarihli bir test sonucudur; hiç hata olmadığı anlamına gelmez.
 
 | Alan | Kanıt / kalan iş |
 |---|---|
