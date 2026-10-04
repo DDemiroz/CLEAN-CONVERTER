@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0 — unreleased
+## 1.0.0 — 2026-10-04
 
 - Direct contact-page support link; compact footer aligned with status text.
 - Windows version metadata and bilingual installer with corrected publisher.
