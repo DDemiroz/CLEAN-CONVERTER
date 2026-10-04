@@ -49,7 +49,7 @@ Mevcut geliştirme/derleme hedefi **Windows x64**; desteklenen en eski Windows s
 
 Numaralar açıklama içindir; uygulamanın gerçek arayüzünde görünmez.
 
-Ekran görüntüleri alttaki **Questions or report any bugs → demirdemiroz.com** bölümü eklenmeden önce alındı. Bağlantı aşağıda açıklanmıştır; mevcut görseller korunmuştur.
+Ekran görüntülerinde kişisel olmayan örnek veriler kullanılır ve güncel **Questions or report any bugs → demirdemiroz.com** alt satırı gösterilir.
 
 | No | Alan / düğme | Ne işe yarar? |
 |---|---|---|

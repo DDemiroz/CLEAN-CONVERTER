@@ -49,7 +49,7 @@ Canceling the first output-folder selection closes the app. Later, use **Output 
 
 Numbers are documentation annotations, not part of the actual application.
 
-The screenshots predate the **Questions or report any bugs → demirdemiroz.com** footer. The link is described below; existing images are retained.
+The screenshots use non-private sample data and show the current **Questions or report any bugs → demirdemiroz.com** footer.
 
 | No. | Control | What it does |
 |---|---|---|
